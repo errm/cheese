@@ -35,6 +35,6 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           push: true
-          tags: boredland/${{ matrix.cheese }}:latest
+          tags: boredland/cheese:${{ matrix.cheese }}
           build-args: |
             CHEESE: ${{ matrix.cheese }}
