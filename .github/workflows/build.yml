@@ -36,7 +36,5 @@ jobs:
         with:
           push: true
           tags: boredland/cheese:${{ matrix.cheese }}
-          cache-from: type=gha
-          cache-to: type=gha,mode=max
           build-args: |
             CHEESE=${{ matrix.cheese }}
