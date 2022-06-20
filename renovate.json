@@ -1,0 +1,37 @@
+{
+  "automerge": true,
+  "enabled": true,
+  "extends": [
+    ":autodetectPinVersions",
+    ":dependencyDashboard",
+    ":semanticPrefixFixDepsChoreOthers",
+    "github>whitesource/merge-confidence:beta",
+    "group:monorepos",
+    "group:recommended",
+    "workarounds:all",
+    "helpers:pinGitHubActionDigests"
+  ],
+  "labels": ["dependency"],
+  "lockFileMaintenance": {
+    "automerge": true,
+    "enabled": true
+  },
+  "major": {
+    "dependencyDashboardApproval": true
+  },
+  "npm": {
+    "enabled": true
+  },
+  "github-actions": {
+    "enabled": true
+  },
+  "packageRules": [
+    {
+      "automerge": true,
+      "automergeStrategy": "squash",
+      "matchUpdateTypes": ["digest", "minor", "patch", "pin"]
+    }
+  ],
+  "prConcurrentLimit": 1,
+  "semanticCommits": "enabled"
+}
